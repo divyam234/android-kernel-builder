@@ -1,3 +1,3 @@
 # kernel-builder
 
-Build ANdroid Kernel through github actions
+Build Android Kernel through github actions
