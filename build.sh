@@ -18,6 +18,21 @@ cdir() {
 		err "The directory $1 doesn't exists !"
 }
 
+installDependencies(){	
+apt -y update 
+apt -y install git automake lzop bison gperf build-essential zip \
+ curl zlib1g-dev g++-multilib libxml2-utils bzip2 libbz2-dev libbz2-1.0 \
+ libghc-bzlib-dev squashfs-tools pngcrush schedtool dpkg-dev liblz4-tool make \
+ optipng bc libstdc++6 libncurses5 wget python3 python3-pip python gcc clang  \
+ libssl-dev rsync flex git-lfs libz3-dev libz3-4 axel tar gcc llvm lld g++-multilib clang default-jre libxml2
+
+}
+
+installDependencies
+
+## clone Kernel
+git clone https://github.com/divyam234/android_kernel_asus_sdm660 -b eleven
+
 ##------------------------------------------------------##
 ##----------Basic Informations, COMPULSORY--------------##
 
@@ -427,24 +442,6 @@ gen_zip() {
 	fi
 }
 
-
-installDependencies(){
-	
-apt -y update 
-apt -y install git automake lzop bison gperf build-essential zip \
- curl zlib1g-dev g++-multilib libxml2-utils bzip2 libbz2-dev libbz2-1.0 \
- libghc-bzlib-dev squashfs-tools pngcrush schedtool dpkg-dev liblz4-tool make \
- optipng bc libstdc++6 libncurses5 wget python3 python3-pip python gcc clang  \
- libssl-dev rsync flex git-lfs libz3-dev libz3-4 axel tar gcc llvm lld g++-multilib clang default-jre libxml2
-
-}
-
-cloneKernel(){
-
-  git clone https://github.com/divyam234/android_kernel_asus_sdm660 -b eleven
-}
-
-installDependencies
 cloneKernel
 setversioning
 clone
