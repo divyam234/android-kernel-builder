@@ -443,7 +443,6 @@ gen_zip() {
 	fi
 }
 
-cloneKernel
 setversioning
 clone
 exports
