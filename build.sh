@@ -32,13 +32,13 @@ installDependencies
 
 ## clone Kernel
 echo "Cloning Kernel"
-git clone https://github.com/divyam234/android_kernel_asus_sdm660 -b eleven
+git clone https://github.com/divyam234/android_kernel_asus_sdm660 -b eleven kernel
 
 ##------------------------------------------------------##
 ##----------Basic Informations, COMPULSORY--------------##
 
 # The defult directory where the kernel should be placed
-KERNEL_DIR=$(pwd)/android_kernel_asus_sdm660
+KERNEL_DIR=$(pwd)/kernel
 cd $KERNEL_DIR
 
 # The name of the device for which the kernel is built
